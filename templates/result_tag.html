@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>TAG GENERATOR </h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>oh good , i have founght some helpful tags for you</b></p>
+	<div class="results">
+	
+	
+	<h2 style="color:red;">tags les plus précis </h2>
+	<ul> 
+	{% for tag in tag_precis %} 
+	  <li><a href="#">{{ tag }}</a></li> 
+	{% endfor %} 
+	</ul> 
+	
+	<h2 style="color:blue;">autres tags en rapport </h2>
+	<ul> 
+	{% for tag in tag_correles %} 
+	  <li><a href="#">{{ tag }}</a></li> 
+	{% endfor %} 
+	</ul> 
+
+	</div>
+
+</body>
+</html>
+
+
+
+
+
